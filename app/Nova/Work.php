@@ -15,8 +15,13 @@ use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
+use Laravel\Nova\Actions\Actionable;
+
+
 class Work extends Resource
 {
+    use Actionable;
+
     /**
      * The model the resource corresponds to.
      *
@@ -95,6 +100,8 @@ class Work extends Resource
 
             BelongsToMany::make(__('作品成员'),'members', Member::class)->hideFromIndex()->searchable(),
 
+            BelongsToMany::make(__('投票用户'),'users', User::class)->hideFromIndex()->searchable(),
+
         ];
     }
 
@@ -139,6 +146,6 @@ class Work extends Resource
      */
     public function actions(Request $request)
     {
-        return [];
+        return [new Actions\AddVotes];
     }
 }

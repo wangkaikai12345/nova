@@ -26,4 +26,15 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * 与作品的多对多关联
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     * @author 王凯
+     */
+    public function works()
+    {
+        return $this->belongsToMany(Work::class);
+    }
 }

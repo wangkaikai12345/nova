@@ -2,6 +2,7 @@
 
 namespace App\Nova;
 
+use Laravel\Nova\Fields\BelongsToMany;
 use Laravel\Nova\Fields\Boolean;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
@@ -82,6 +83,8 @@ class User extends Resource
                 ->onlyOnForms()
                 ->creationRules('required', 'string', 'min:6')
                 ->updateRules('nullable', 'string', 'min:6'),
+
+            BelongsToMany::make(__('投票作品'),'works', Work::class)->hideFromIndex()->searchable(),
         ];
     }
 
@@ -93,7 +96,7 @@ class User extends Resource
      */
     public function cards(Request $request)
     {
-        return [];
+        return [new Metrics\NewUsers];
     }
 
     /**

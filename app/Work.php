@@ -31,4 +31,9 @@ class Work extends Model
     {
         return $this->belongsToMany(Member::class);
     }
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class);
+    }
 }
