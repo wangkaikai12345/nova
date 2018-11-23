@@ -2,6 +2,7 @@
 
 namespace App\Nova;
 
+use Frowhy\NovaFieldQuill\NovaFieldQuill;
 use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
@@ -77,7 +78,9 @@ class Post extends Resource
                 ->rules('numeric')
                 ->sortable(),
 
-            Trix::make(__('内容'),'content')->hideFromIndex(),
+//            Trix::make(__('内容'),'content')->hideFromIndex(),
+
+            NovaFieldQuill::make(__('内容'),'content')->hideFromIndex()
         ];
     }
 

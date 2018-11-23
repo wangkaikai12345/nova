@@ -4,8 +4,65 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "fe56e245588a3bc642cbb31438d9ab27",
+    "content-hash": "6d25dbb1026ed58b30aa6d126ef609c7",
     "packages": [
+        {
+            "name": "beyondcode/nova-tinker-tool",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/beyondcode/nova-tinker-tool.git",
+                "reference": "d9738e99bb5cde02128e2d1aef4ea1c07533332c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/beyondcode/nova-tinker-tool/zipball/d9738e99bb5cde02128e2d1aef4ea1c07533332c",
+                "reference": "d9738e99bb5cde02128e2d1aef4ea1c07533332c",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "laravel/nova": "*",
+                "laravel/tinker": "^1.0",
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Beyondcode\\TinkerTool\\TinkerToolServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Beyondcode\\TinkerTool\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marcel Pociot",
+                    "email": "marcel@beyondco.de",
+                    "homepage": "https://beyondco.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Use Laravel tinker from Nova.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "time": "2018-10-04T08:08:24+00:00"
+        },
         {
             "name": "cakephp/chronos",
             "version": "1.2.3",
@@ -521,6 +578,53 @@
                 "trusted proxy"
             ],
             "time": "2018-02-07T20:20:57+00:00"
+        },
+        {
+            "name": "frowhy/nova-field-quill",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/frowhy/nova-field-quill.git",
+                "reference": "de9a102574af5bed9e1aa35528857bbdb1dd2b9a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/frowhy/nova-field-quill/zipball/de9a102574af5bed9e1aa35528857bbdb1dd2b9a",
+                "reference": "de9a102574af5bed9e1aa35528857bbdb1dd2b9a",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Frowhy\\NovaFieldQuill\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Frowhy\\NovaFieldQuill\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova field.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "time": "2018-09-29T04:24:03+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -1622,6 +1726,62 @@
                 "uuid"
             ],
             "time": "2018-07-19T23:38:55+00:00"
+        },
+        {
+            "name": "sbine/route-viewer",
+            "version": "0.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sbine/nova-route-viewer.git",
+                "reference": "10c3485213deb41b6298ed3b7f3ea03f1b00f733"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sbine/nova-route-viewer/zipball/10c3485213deb41b6298ed3b7f3ea03f1b00f733",
+                "reference": "10c3485213deb41b6298ed3b7f3ea03f1b00f733",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "laravel/nova": "*",
+                "php": ">=7.1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Sbine\\RouteViewer\\ToolServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sbine\\RouteViewer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sara Bine",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A Laravel Nova tool to view your registered routes.",
+            "homepage": "https://github.com/sbine/nova-route-viewer",
+            "keywords": [
+                "laravel",
+                "nova",
+                "routes"
+            ],
+            "time": "2018-09-18T02:14:46+00:00"
         },
         {
             "name": "spatie/once",

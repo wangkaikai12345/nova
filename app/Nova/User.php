@@ -96,7 +96,9 @@ class User extends Resource
      */
     public function cards(Request $request)
     {
-        return [new Metrics\NewUsers];
+        return [
+//            new Metrics\NewUsers
+        ];
     }
 
     /**
