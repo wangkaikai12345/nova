@@ -28,7 +28,6 @@ class AddVotes extends Action implements ShouldQueue
         //
         foreach ($models as $model) {
 
-
             $model->increment('votes', $fields->number);
             $this->markAsFinished($model);
         }

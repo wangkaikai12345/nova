@@ -79,15 +79,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Laravel Nova
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    Laravel Nova 是一个专门为 Laravel 应用打造的、美观的、一流的后台管理面板，当然，Nova 的核心功能还是通过 Eloquent 管理底层数据库记录，不过在这个核心功能之上，Nova 还支持过滤器、透镜、动作、动作队列、授权、自定义工具、自定义卡片、自定义字段等额外功能
                 </div>
             </div>
         </div>

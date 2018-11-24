@@ -77,7 +77,7 @@ class Work extends Resource
 
             ID::make()->sortable(),
 
-            BelongsTo::make(__('作品组'), 'group', Group::class)->rules('required'),
+            BelongsTo::make(__('作品组'), 'group', Group::class)->searchable()->rules('required'),
 
             Text::make(__('标题'),'title')->sortable()
                 ->rules('required', 'max:255')
