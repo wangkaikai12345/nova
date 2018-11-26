@@ -7,6 +7,7 @@ use Laravel\Nova\Nova;
 use Laravel\Nova\Cards\Help;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Nova\NovaApplicationServiceProvider;
+use Wangkai\Tips\Tips;
 
 class NovaServiceProvider extends NovaApplicationServiceProvider
 {
@@ -57,8 +58,8 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     protected function cards()
     {
         return [
-//            new Help,
-            new NewUsers,
+            new Help,
+//            new NewUsers,
         ];
     }
 
@@ -70,8 +71,9 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     public function tools()
     {
         return [
-            new \Beyondcode\TinkerTool\Tinker(),
-            new \Sbine\RouteViewer\RouteViewer,
+//            new \Beyondcode\TinkerTool\Tinker(),
+//            new \Sbine\RouteViewer\RouteViewer,
+            new Tips()
         ];
     }
 
@@ -84,4 +86,6 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     {
         //
     }
+
+
 }

@@ -8,6 +8,13 @@ use Laravel\Nova\Http\Requests\NovaRequest;
 abstract class Resource extends NovaResource
 {
     /**
+     * 指示资源是否是全局可搜索的。
+     *
+     * @var bool
+     */
+    public static $globallySearchable = false;
+
+    /**
      * Build an "index" query for the given resource.
      *
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request

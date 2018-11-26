@@ -1,7 +1,10 @@
 {
     "name": "laravel/laravel",
     "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
     "license": "MIT",
     "type": "project",
     "require": {
@@ -13,7 +16,8 @@
         "laravel/framework": "5.6.*",
         "laravel/nova": "*",
         "laravel/tinker": "^1.0",
-        "sbine/route-viewer": "^0.0.5"
+        "sbine/route-viewer": "^0.0.5",
+        "wangkai/tips": "*"
     },
     "require-dev": {
         "filp/whoops": "^2.0",
@@ -38,8 +42,7 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": [
-            ]
+            "dont-discover": []
         }
     },
     "scripts": {
@@ -63,6 +66,14 @@
         {
             "type": "path",
             "url": "./nova"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/Tips"
+        },
+        {
+            "type": "path",
+            "url": "./nova-components/Tips"
         }
     ],
     "minimum-stability": "dev",

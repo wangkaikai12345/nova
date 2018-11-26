@@ -19,7 +19,9 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->boolean('active')->default(true)->comment('是否禁用');
             $table->string('password');
+            $table->text('options')->nullable()->comment('备注');
             $table->rememberToken();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

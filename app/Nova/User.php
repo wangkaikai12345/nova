@@ -4,11 +4,16 @@ namespace App\Nova;
 
 use Laravel\Nova\Fields\BelongsToMany;
 use Laravel\Nova\Fields\Boolean;
+use Laravel\Nova\Fields\Code;
 use Laravel\Nova\Fields\ID;
 use Illuminate\Http\Request;
+use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Gravatar;
 use Laravel\Nova\Fields\Password;
+use Laravel\Nova\Fields\Textarea;
+use Laravel\Nova\Fields\Trix;
+use Laravel\Nova\Panel;
 
 class User extends Resource
 {
@@ -70,6 +75,19 @@ class User extends Resource
 
             Boolean::make(__('状态'), 'active'),
 
+//            new Panel('others', function (){
+//                return [
+//                    Text::make(__('用户名'),'name')
+//                        ->sortable()
+//                        ->rules('required', 'max:255'),
+//
+//                    Text::make(__('邮箱'),'email')
+//                        ->rules('required', 'email', 'max:254')
+//                        ->creationRules('unique:users,email')
+//                        ->updateRules('unique:users,email,{{resourceId}}'),
+//                ];
+//            }),
+
             Text::make(__('用户名'),'name')
                 ->sortable()
                 ->rules('required', 'max:255'),
@@ -78,6 +96,10 @@ class User extends Resource
                 ->rules('required', 'email', 'max:254')
                 ->creationRules('unique:users,email')
                 ->updateRules('unique:users,email,{{resourceId}}'),
+
+//            Markdown::make(__('备注'), 'options'),
+//            Trix::make(__('备注'), 'options'),
+//            Code::make(__('备注'), 'options')->json(),
 
             Password::make(__('密码'),'password')
                 ->onlyOnForms()
